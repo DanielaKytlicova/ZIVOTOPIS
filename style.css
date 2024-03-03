@@ -5,7 +5,13 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     font-family: "Open Sans", sans-serif;
-    padding: 0 300px;
+
+
+
+}
+.domu {
+   padding: 0 300px;
+   margin: 30% 0 25% 0%;
 }
 .menu li {
     display: inline-block;
@@ -24,20 +30,20 @@ body {
  p {
     text-align: center;
  }
-/* .odkazy {
+ .odkazy {
     margin-left: 0%;
  }
- .odkazy img {
+ /*.odkazy img {
     display: inline-block;
     width: 30px;
- }*/
+    align-items: right;
+ }
+ */
 
  h1 {
     text-align: left;
  }
- .domu {
-    margin: 30% 0 50% 0%;
- }
+
  h3,
  h4 {
     text-align: center;
@@ -48,34 +54,63 @@ body {
     width: 300px;
     float: left
  }
-
+.omne-box{
+   padding: 0 300px;
+}
  .omne {
-    padding-top: 5%;
+   display: block;
+
  }
  .omne img {
-    width: 50px;
+    width: 6%;
 
  }
 
  .portfolio {
+   display: block;
     padding-top: 10%;
     clear: left;
+
  }
 
  .budubezdluhu {
     width: 490px;
  }
+
  .dovednosti {
     padding-top: 5%;
+    align-items: center;
  }
+
  .dovednosti img {
+
     width: 70px;
  }
+
+.ikony,
+.ikony2,
+.ikony3,
+.ikony4{
+   text-align: center;
+}
+
+ .jazyky img {
+   width: 5px;
+ }
+
  .kontakt {
     padding-top: 5%;
  }
+ .kontakt a {
+   color: bisque;
+ }
 
  .foter {
+   font-style: italic;
+   display: block;
     padding: 30px;
     text-align: center;
+    color: rgb(92, 92, 92);
+
+
  }

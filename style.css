@@ -31,14 +31,32 @@ body {
     text-align: center;
  }
  .odkazy {
+   margin-top: 150px;
+   margin-left: 400px;
+   position: absolute;
+   width: 30px;
     margin-left: 0%;
  }
- /*.odkazy img {
+ .odkazy img {
+   
     display: inline-block;
     width: 30px;
     align-items: right;
  }
- */
+ .odkazy li { 
+   
+   display: flex;
+width: 22px;
+height: 91px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 16px;
+      display: flex;
+      justify-content: flex-end; /* zarovnání doprava */
+      align-items: center;       /* vertikální střed */
+}
+
 
  h1 {
     text-align: left;

@@ -11,7 +11,8 @@ body {
 }
 .domu {
    padding: 0 300px;
-   margin: 30% 0 25% 0%;
+   margin: 30% 0 30% 40%;
+   font-weight: normal;
 }
 .menu li {
     display: inline-block;

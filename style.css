@@ -11,7 +11,7 @@ body {
 }
 .domu {
    padding: 0 300px;
-   margin: 30% 0 30% 40%;
+   margin: 30% 0 25% 40%;
    font-weight: normal;
 }
 body {
@@ -112,16 +112,46 @@ gap: 16px;
       align-items: center;       /* vertikální střed */
 }
 
+@media (max-width: 768px) {
+  .odkazy {
+ margin-top: 15px;
+  }
+ .odkazy img{
+ width: 20px;
+  }
+ .odkazy li {
+height: 50px;
+  }
+}
+
 
  h1 {
     text-align: left;
  }
 
- h3,
+@media (max-width: 768px) {
+  h1, h2 {
+display: none;
+  }}
+
+@media (max-width: 768px) {
+  h3 {
+padding-top: 25%;
+  }}
+ h3 {
+    text-align: center;
+    padding-bottom: 5%;
+ }
  h4 {
     text-align: center;
     color: #5FDBCA;
+ 
  }
+ @media (max-width: 768px) {
+  h4 {
+    margin: 20%;
+font-size: large
+  }}
 
  .foto-omne {
     width: 300px;
@@ -132,7 +162,8 @@ gap: 16px;
 }
  .omne {
    display: block;
-
+   padding: 8%;
+ line-height: 1.8;
  }
  .omne img {
     width: 6%;

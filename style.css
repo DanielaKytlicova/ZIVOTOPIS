@@ -129,6 +129,7 @@ height: 50px;
     text-align: left;
  }
 
+ 
 @media (max-width: 768px) {
   h1, h2 {
 display: none;
@@ -136,7 +137,7 @@ display: none;
 
 @media (max-width: 768px) {
   h3 {
-padding-top: 25%;
+padding-top: 8%;
   }}
  h3 {
     text-align: center;
@@ -144,7 +145,7 @@ padding-top: 25%;
  }
  h4 {
     text-align: center;
-    color: #5FDBCA;
+    color: #ffffff6a;
  
  }
  @media (max-width: 768px) {
@@ -170,25 +171,29 @@ font-size: large
 
  }
 
- .portfolio {
-   display: block;
-    padding-top: 10%;
-    clear: left;
 
- }
+@media (min-width: 500px) {
+  .columns {
+    display: flex;
+    gap: 40px;
+}
 
- .budubezdluhu {
-    width: 490px;
- }
+.left, .right {
+    width: 50%;
+}
 
- .dovednosti {
-    padding-top: 5%;
-    align-items: center;
- }
+h3 {
+    margin-bottom: 10px;
+}
 
+h4 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+}
  .dovednosti img {
 
-    width: 70px;
+    width: 30px;
  }
 
 .ikony,

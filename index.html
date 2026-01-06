@@ -18,12 +18,14 @@
      <nav>
     <span class="menu-toggle">&#9776;</span> 
    <ul class="menu"> 
-    <li><a href="domu">Domů </a></li> 
-    <li><a href="omne">O mně</a></li> 
-    <li><a href="Kontakt">Kontakt</a></li>
- <!--  <li><a href="portfolio">Portfolio</a></li> 
-    <li><a href="dovednosti">Dovednosti</a></li>
-    --> 
+<!--   <li><a href="#domu">Domů </a></li> --> 
+    <li><a href="#omne">O mně</a></li> 
+    <li><a href="#dovednosti">Dovednosti</a></li>    
+    <li><a href="#kontakt">Kontakt</a></li>
+
+<!--  <li><a href="#portfolio">Portfolio</a></li> -->
+
+    
 </ul>
 </nav>
 
@@ -35,12 +37,12 @@
   </ul>
 </div>
 
-
-
-    <section class="domu">
+<section id="domu" class="domu">
     <h1>Daniela Kytlicová <br> </h1>
     <h2>GRAFICKÝ DESIGNER</h2>
 </section>
+
+
 
 
     <!--O mně 
@@ -48,7 +50,8 @@
   <img class="foto-omne" src="obrazky/Portfolio foto.png" alt="Daniela Kytlicova"
     <section id="omne" class="omne">
 --> 
-        <div class="omne">
+<section id="omne" class="omne">
+
             <h3>O mně</h3>
     <p>Jsem designer s více než desetiletou praxí v oboru grafiky, vizuální komunikace a uživatelského rozhraní. <br><br>
 
@@ -57,13 +60,14 @@ Svoji profesní dráhu jsem začala v roce 2014 jako grafický designer, kdy jse
 V roce 2018 jsem se přirozeně dostala k UX/UI designu, který se pro mě stal srdeční záležitostí. Figma se stala mým hlavním pracovním nástrojem a díky zkušenostem z praxe jsem si uvědomila, jak důležité jsou mezioborové přesahy. Proto jsem se v posledních letech zaměřila také na HTML a CSS – abych dokázala vytvářet návrhy, které jsou nejen vizuálně atraktivní, ale i technicky realizovatelné. Aktuálně se dále vzdělávám v JavaScriptu.<br><br>
 
 Tvořím jak tiskovou a DTP grafiku, tak digitální rozhraní a kompletní vizuální identity. Na volné noze pracuji od roku 2018 a mám zkušenosti jak s jednorázovými projekty, tak s dlouhodobou spoluprací. Na práci designéra mě baví její rozmanitost, nutnost neustále se učit a držeť krok s novými trendy.</p>
-        </div>
+    </section>
+
 
 
  
 
  <!-- Dovednosti -->
-    <section class="dovednosti">  
+    <section class="dovednosti" id="dovednosti">  
     <div class="nadpis">
         <h3>Dovednosti</h3>
     </div>
@@ -128,8 +132,9 @@ Tvořím jak tiskovou a DTP grafiku, tak digitální rozhraní a kompletní vizu
 
  
 -->
-</section> 
+
     <section id="kontakt" class="kontakt">
+
     <h3>Kontakt</h3>
     <p>Náhled do portfolia & reference:
     
@@ -140,7 +145,25 @@ Tvořím jak tiskovou a DTP grafiku, tak digitální rozhraní a kompletní vizu
     <p> Nebo mě kontaktujte na mail: <a href="mailto:kytlicova@icloud.com">kytlicova@icloud.com</a></p>
 </section>
 
+<form class="kontakt-form" action="mailto:kytlicova@icloud.com" method="post" enctype="text/plain">
+  <input type="text" name="Jméno" placeholder="Jméno" required>
+
+  <input type="email" name="Email" placeholder="E-mail" required>
+
+  <textarea name="Zpráva" placeholder="Zpráva" rows="5" required></textarea>
+
+  <button type="submit">Odeslat</button>
+</form>
+
+
 <footer class="foter"> © Daniela Kytlicová, 2024 </footer>
+
+
+<script>
+document.querySelector(".menu-toggle").addEventListener("click", function() {
+    document.querySelector(".menu").classList.toggle("show");
+});
+</script>
 
 </body>
 </html>

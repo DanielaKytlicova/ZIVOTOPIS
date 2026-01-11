@@ -1,16 +1,22 @@
 /* === ZÁKLADNÍ STYL STRÁNKY === */
 body {
     color: white;
-    background-color: #060606;
-    background-image: url(obrazky/BCG.png);
+
+    /* 1) Gradient dole, obrázek nahoře */
+    background-image: 
+        url("obrazky/BCG.png"),
+        linear-gradient(to left, #151515, #000000);
+
+    /* 2) Nastavení obrázku */
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: right top;
+
+    /* 3) Ostatní */
     font-family: "Open Sans", sans-serif;
     margin: 0;
-    font-family: sans-serif;
-
-
 }
+
 .domu {
    padding: 0 300px;
    margin: 30% 0 25% 40%;
@@ -192,6 +198,8 @@ h4 {
     width: 30px;
  }
 
+
+
 .ikony,
 .ikony2,
 .ikony3,
@@ -200,6 +208,61 @@ h4 {
 }
 
 
+.ikony3 {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-img img {
+    display: block;
+align-items: center;
+    height: auto;
+}
+
+/* SVG kolem ikony */
+.progress-ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bg-rect {
+    fill: #fff;
+    opacity: 0;
+}
+
+.gap-rect {
+    fill: transparent;
+}
+
+.progress-rect {
+    fill: transparent;
+    stroke: #00c3ff;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.2s ease;
+}
+
+/* Čísla pod ikonou */
+.percent-label {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
 
  .kontakt {
@@ -214,7 +277,7 @@ h4 {
   max-width: 400px;
   margin: 0 auto;
   color: white;
-  background-color: #060606;
+
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
@@ -247,7 +310,7 @@ h4 {
 
 .kontakt-form button:hover {
   background-color: white;
-  color: black;
+  color: #111111;
 }
 
 

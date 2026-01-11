@@ -1,25 +1,53 @@
-const wrapper = document.querySelector('.circle-wrapper');
-const progressCircle = wrapper.querySelector('.progress-circle');
+document.addEventListener('DOMContentLoaded', () => {
 
-const radius = 44;
-const circumference = 2 * Math.PI * radius;
+    const wrappers = document.querySelectorAll('.icon-wrapper');
 
-progressCircle.style.strokeDasharray = `${circumference}`;
-progressCircle.style.strokeDashoffset = `${circumference}`;
+    wrappers.forEach(wrapper => {
+        const progressRect = wrapper.querySelector('.progress-rect');
+        const percentLabel = wrapper.querySelector('.percent-label');
+        const targetPercent = parseInt(wrapper.dataset.percent);
 
-const percent = wrapper.dataset.percent;
+        const side = 80; // velikost obdélníku
+        const perimeter = 4 * side;
 
-// Funkce pro animaci
-function animateProgress() {
-  const offset = circumference - (percent / 100) * circumference;
-  progressCircle.style.strokeDashoffset = offset;
-}
+        progressRect.style.strokeDasharray = perimeter;
+        progressRect.style.strokeDashoffset = perimeter;
 
-// Reset při odjetí myší (pokud chceš, můžeš smazat)
-function resetProgress() {
-  progressCircle.style.strokeDashoffset = circumference;
-}
+        let counterInterval = null;
+        let numbersVisible = false;
 
-// Spuštění animace při najetí myší
-wrapper.addEventListener('mouseenter', animateProgress);
-wrapper.addEventListener('mouseleave', resetProgress);
+        function animateProgress() {
+            const offset = perimeter - (targetPercent / 100) * perimeter;
+            progressRect.style.strokeDashoffset = offset;
+
+            if (!numbersVisible) {
+                percentLabel.style.opacity = 1;
+                numbersVisible = true;
+            }
+
+            let current = 0;
+            clearInterval(counterInterval);
+
+            counterInterval = setInterval(() => {
+                if (current >= targetPercent) {
+                    clearInterval(counterInterval);
+                } else {
+                    current++;
+                    percentLabel.textContent = current + "%";
+                }
+            }, 15);
+        }
+
+        function resetProgress() {
+            progressRect.style.strokeDashoffset = perimeter;
+            percentLabel.style.opacity = 0;
+            numbersVisible = false;
+            percentLabel.textContent = "0%";
+            clearInterval(counterInterval);
+        }
+
+        wrapper.addEventListener('mouseenter', animateProgress);
+        wrapper.addEventListener('mouseleave', resetProgress);
+    });
+
+});
